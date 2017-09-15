@@ -1,1 +1,8 @@
+kafka:
+  bootstrap-server: localhost:7474
+  topic: acme-widget
+  producer:
+    key.serializer: org.apache.kafka.common.serialization.StringSerializer
+    value.serializer: org.apache.kafka.common.serialization.StringSerializer
+
 

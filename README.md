@@ -16,3 +16,12 @@ Acme is made up of the following:
 
 The Acme Inventory ingestion system uses a combination of Kafka Producers/Consumers to stream data into Neo4j.
 
+docker run --publish=7474:7474 --publish=7687:7687 --volume=$HOME/neo4j/data:/data --volume=$HOME/neo4j/logs:/logs neo4j:3.2
+
+CREATE CONSTRAINT ON (r:Region) ASSERT r.id IS UNIQUE
+CREATE CONSTRAINT ON (h:Hub) ASSERT h.id IS UNIQUE
+CREATE CONSTRAINT ON (h:Hub) ASSERT h.regionHubId IS UNIQUE
+CREATE CONSTRAINT ON (b:Bin) ASSERT b.id IS UNIQUE
+CREATE CONSTRAINT ON (b:Bin) ASSERT b.regionHubBinId IS UNIQUE
+CREATE CONSTRAINT ON (w:Widget) ASSERT w.id IS UNIQUE
+CREATE CONSTRAINT ON (w:Widget) ASSERT w.regionHubWidgetId IS UNIQUE

@@ -17,12 +17,28 @@ apply plugin: 'org.springframework.boot'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
+ext {
+	spring_kafka_version = '1.2.2.RELEASE'
+}
+
+
+
 repositories {
 	mavenCentral()
 }
 
 
 dependencies {
+	compile("com.fasterxml.jackson.core:jackson-databind")
+	compile('com.fasterxml.jackson.datatype:jackson-datatype-jdk8')
+	compile('com.fasterxml.jackson.datatype:jackson-datatype-jsr310')
 	compile('org.springframework.boot:spring-boot-starter')
+	compile('org.apache.kafka:kafka-clients:0.10.2.0')
+	compile('org.springframework:spring-context-support')
+	compile("org.springframework.boot:spring-boot-starter-actuator")
+	compile("org.springframework.boot:spring-boot-devtools")
+	compile("org.springframework.boot:spring-boot-starter-web")
+	compile("org.springframework.kafka:spring-kafka:${spring_kafka_version}")
+	compile("org.springframework.retry:spring-retry")
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }

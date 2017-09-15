@@ -1,0 +1,13 @@
+kafka.bootstrapAddress: localhost:9092
+message.topic.name: test
+
+spring:
+  application:
+    name: Single Topic Consumer
+  jackson:
+    deserialization:
+      FAIL_ON_UNKNOWN_PROPERTIES: false
+
+server:
+  context-path: /single-topic-consumer
+  port: 10000

@@ -1,0 +1,2 @@
+rootProject.name = 'AcmeWidgets'
+include ':producer', ':single-topic-consumer', ':multi-topic-consumer'

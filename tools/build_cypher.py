@@ -10,7 +10,7 @@ fd.write("CREATE CONSTRAINT ON (w:Widget) ASSERT w.regionHubWidget IS UNIQUE\n\n
 
 cypher = (
     "MERGE (r:Region {regionNumber: '%s', name: 'Region%s'})-[:REGION_HUB]->"
-    "(h:Hub {hubNumber: %s, hubName: 'Hub%s', regionBin: '%s-%s'})\n"
+    "(h:Hub {hubNumber: %s, hubName: 'Hub%s', regionHub: '%s-%s'})\n"
 )
 for reg in range(1,26):
     for hub in range(1,101):

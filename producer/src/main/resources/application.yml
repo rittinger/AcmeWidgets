@@ -1,6 +1,14 @@
+spring:
+    application:
+        name: AcmeWidgetProducer
+
+server:
+    contextPath: /producer
+    port: 8000
+
 kafka:
-  boostrapAddress: localhost:7474
-  topic: acme-widget
+  boostrapAddress: localhost:9092
+  topic: widget
   producer:
     key.serializer: org.apache.kafka.common.serialization.StringSerializer
     value.serializer: org.apache.kafka.common.serialization.StringSerializer

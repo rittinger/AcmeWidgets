@@ -3,12 +3,12 @@ spring:
         name: AcmeWidgetProducer
 
 server:
-    contextPath: /producer
+    contextPath: /acme
     port: 8000
 
 kafka:
   boostrapAddress: localhost:9092
-  topic: widget
+  topicName: widget
   producer:
     key.serializer: org.apache.kafka.common.serialization.StringSerializer
     value.serializer: org.apache.kafka.common.serialization.StringSerializer

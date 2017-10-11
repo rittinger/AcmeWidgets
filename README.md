@@ -48,6 +48,14 @@ MERGE (r)-[:REGION_HUB]->(h)
 - Start local instance of zookeeper/kafka using standard ports (or Dockerized Zookeeper/Kafka)
 - Create the 'widget' topic
 
+```bash
+# From where you have kafka installed run: 
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic widget
+
+#Verify the topic is created:
+bin/kafka-topics.sh --list --zookeeper localhost:2181
+
+```
 ### Producing Data:
 
     The producer has a REST endpoint that can load data for one or more regions: 
